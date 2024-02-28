@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EE Projects Portfolio</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            padding: 20px;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #0779e4 3px solid;
+        }
+
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            margin: 0 15px;
+        }
+
+        nav ul {
+            padding: 0;
+            list-style: none;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        section {
+            padding: 20px 0;
+            margin: 20px 0;
+        }
+
+        #project-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 15px;
+        }
+
+        .project-item {
+            margin-bottom: 15px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav ul {
+                text-align: center;
+                margin-top: 15px;
+            }
+
+            nav ul li {
+                display: block;
+                margin-bottom: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <section id="home">
+        <h1>Welcome to My EE Projects Portfolio</h1>
+    </section>
+    
+    <section id="projects">
+        <h2>Projects</h2>
+        <div id="project-gallery">
+            <!-- Project items will be inserted here -->
+        </div>
+    </section>
+    
+    <section id="about">
+        <h2>About Me</h2>
+        <!-- About me content -->
+    </section>
+    
+    <section id="contact">
+        <h2>Contact</h2>
+        <!-- Contact form -->
+    </section>
+
+    <script>
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Placeholder for Project Gallery and Contact Form Logic
+        // This section is where you would add JavaScript to interact with the project items
+        // and to handle the contact form submission. 
+
+        // For a simple example, let's log a message when a project item is clicked.
+        document.addEventListener('DOMContentLoaded', () => {
+            const projectItems = document.querySelectorAll('.project-item');
+
+            projectItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    console.log('Project item clicked!');
+                    // Here you could open a modal or display project details dynamically.
+                });
+            });
+
+            // Placeholder for contact form submission logic
+            // Example: Form submission without page reload
+            const contactForm = document.querySelector('#contact-form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', e => {
+                    e.preventDefault();
+                    // Perform form validation and AJAX submission here
+                    console.log('Form submitted!');
+                    // Reset or update the form UI as necessary
+                });
+            }
+        });
+    </script>
+</body>
+</html>
