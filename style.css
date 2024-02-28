@@ -36,11 +36,15 @@ header nav ul li a {
 }
 
 .banner {
-    background: #0779e4;
+    background-image: url('https://Jacob1234599.github.io/my-portfolio/AerialLiftBridgeNight.jpg');
     color: #fff;
     padding: 2rem;
     text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
+
 
 .projects-container {
     display: grid;
